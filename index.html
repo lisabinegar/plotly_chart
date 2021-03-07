@@ -1,15 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Greek gods</title>
-    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Belly Button Biodiversity</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <body style = "background-color:lightcyan"></body>
 </head>
+
 <body>
-    <div id="plot"></div>
-    <script src="data.js"></script>
-    <script src="plots.js"></script>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 jumbotron text-center">
+        <h1>Belly Button Biodiversity Dashboard</h1>
+        <p>Hi, I’m Roza, a biology researcher at Bacter to Beef lab, a prominent microbiology lab. Many bacterial species are not well studied, and many more remain unknown to science. I am working to discover and document these species. I am particularly interested in bacterial species that are able to synthesize proteins and taste like beef. Yes, beef! <p>In partnership with Improbable Beef, we are researching candidate species. We are still searching for the perfect bacteria that will provide the perfect taste. I have a hypothesis that there is a microorganism that can supply the next best taste, and found from bacteria on the human body. The human body harbors thousands of types of bacteria, with different species in different parts of the body. Species may vary between people even in the same location.<p> My hypothesis is that the ideal bacterial species to make synthetic beef may be found in the belly button. I’ve sampled the navels of people across the United States to identify bacterial species that colonize our belly buttons. Each study participant has been assigned an ID number. I’ve built a dashboard that will allow study participants and research partners to access. Study participants can access the dashboard with their study ID number and discover which bacterial species were found in their navels.<p>Use the interactive charts below to explore the dataset.</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-2">
+        <div class="well">
+          <h5>Test Subject ID No.:</h5>
+          <select id="selDataset" onchange="optionChanged(this.value)"></select>
+        </div>
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h3 class="panel-title">Demographic Info</h3>
+          </div>
+          <div id="sample-metadata" class="panel-body"></div>
+        </div>
+      </div>
+      <div class="col-md-5">
+        <div id="bar"></div>
+      </div>
+      <div class="col-md-5">
+        <div id="gauge"></div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div id="bubble"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <script src="static/js/charts.js"></script>
+  <script src="static/js/samples.json"></script>
+
+
+
 </body>
+
 </html>
